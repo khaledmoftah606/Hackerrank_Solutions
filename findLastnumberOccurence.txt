@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+
+int findLastnumberOccurence(int ar_size, int* ar, int x) {
+    int i;
+    
+    for(i = ar_size -1; i >= 0; i--) {
+        if(ar[i] == x) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main() { 
+    
+    int ar[] = {1, 2, 3, 4, 5, 6, 4};
+    printf("%d", findLastnumberOccurence(7, ar, 4));
+   
+    return 0;
+}
+

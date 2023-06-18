@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char* LastandSecondsLast(char*);
+
+int main()
+{
+    char x[] = "apple";
+
+    printf("%s", LastandSecondsLast(x));
+
+    return 0;
+}
+
+
+char* LastandSecondsLast(char* arr) {
+    int i = 0;
+    while(arr[i] != '\0') {
+        i++;
+    }
+
+    static char ar[4];
+    ar[0] = arr[i - 1];
+    ar[1] = ' ';
+    ar[2] = arr[i - 2];
+    ar[3] = '\0';
+
+    return ar;
+}
